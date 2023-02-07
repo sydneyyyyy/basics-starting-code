@@ -23,6 +23,26 @@ JS is CASE-SENSITIVE
 
 In JS you do NOT have to initialize a variable with a value. 
 
+## Operators
+
+Mathematical characters that allow us to manipulate values ( +, -, *, /, % = remainder, ** = exponentation, '=')
+
+## Data Types
+
+- Numbers => 2, -3, 22.956
+- String (text) => "Hi", 'Hello World!', `Hello` 
+
+
+HTML code is executed from top to bottom. If the script tag is placed in the middle of the page, the JS code is then parsed, compiled, and then executed top to bottom. 
+
+### Template Literal
+
+``${expression} or ${variable}``
+
+Allows you to include dynamic values within a string. `` also allows you to use multi-line quotes.
+
+
+
 
 
 
