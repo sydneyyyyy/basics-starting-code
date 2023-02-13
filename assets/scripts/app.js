@@ -1,12 +1,18 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
 
-currentResult = (currentResult + 10) * 3 / 2 - 1;
+function add() {
+    currentResult = currentResult + userInput.value;
+    // alert('The result is ' + result); // <-- String Concatenation
+    // return result; // returns the value to the rest of the code. 
+    outputResult(currentResult, '');
+}
 
-// String Concatenation
-let calculationDescription = `(${defaultResult} + 10) * 3 / 2 - 1`;
-// let errorMessage = 'An error \n' + 
-//                     'occurred!';
+// Calling a function
+// currentResult = add(2, 3);
+
+// When user click's + button then it executes add(). 
+addBtn.addEventListener("click", add);
 
 
-outputResult(currentResult, calculationDescription);
+
