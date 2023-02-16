@@ -128,6 +128,99 @@ Uses dot notation to access properties from the object.
 
 `<script src="assets/scripts/vendor.js" async></script>`
 
+# Conditional Code Execution
+
+### Boolean Operators
+
+Boolean operators are used to compare two data types to each other. Returns true or false. 
+
+* `==` -> check for value equality 
+* `!=` -> Check for value inequality
+* `===` -> Check for value and type equality
+* `!==` -> Check for value and type inequality
+* `> & <` -> Check for value being greater/smaller 
+* `>= & <=` -> Check for value being greater or equal/smaller or equal
+* `!` -> Check if NOT true
+
+JavaScript compares strings based on standard lexicographical ordering, using Unicode values. ( b > a == true ). JS always looks at the first character and only considers other characters if the first character is similar. In addition, capital characters are considered to be smaller than lowercase characters. 
+
+> 'ab' > 'aa' // true
+
+> 'a' > 'B' // true
+
+> 'a' > 'b' // false
+
+### AND vs. OR
+
+* `AND or &&` -> conditions are evaluated together and only yields true if both conditions are true.
+* `OR or ||` -> conditions are evaluated separately yields true if ONE of the conditions are true. 
+
+`conditionsA AND conditionB || conditionC` -> if condition A and C are true then the expression yields true even if condition b is false. 
+
+### Operator Precedence
+
+Operator Precedence determines the way in which operators are parsed with respect to each other. Operators with higher precedence become the operands of operators with lower precedence. 
+
+PEMDAS -> order of operation. 
+
+> MDN doc
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+
+#### Comparing Objects and Arrays: 
+
+`{ name: 'Max' } === or == { name: 'Max' }` 
+
+This returns FALSE because JavaScript doesn't compare the values, it compares the object in memory. 
+
+### Falsy Truthy Values
+
+JS tries to coerce values to a Boolean value if a Boolean is required. Any value is truthy unless they are defined as falsy. 
+
+Falsy Values:
+
+* `0` == Falsy
+* `""` == Falsy
+* `Null`
+* `Undefined`
+* `NaN`
+
+Truthy Values:
+
+* ANY number > 0
+* ANY non-empty string
+* {}
+* []
+* Objects
+* Arrays
+
+### Coercion vs. Conversion
+
+Type Coercion is the automatic or implicit conversion of values from one datatype to another. Whereas Type Conversion is the explicit conversion of value from one datatype to another. 
+
+```
+var x = 10 + '20'
+console.log(x);
+```
+
+Output: 1020 => 10 is automatically converted to a string and then concatenated. 
+
+```
+var w = 10 - '5';
+console.log(w);
+```
+
+Output: 5 -> '5' is automatically converted to a number. 
+
+```
+var x = true + 2;
+var y = false + 2;
+console.log(x);
+console.log(y);
+```
+
+Output: 3 (True is converted to one and then added to 2) and 2 (false is converted to 0 and then added to two). 
+
 
 
 
